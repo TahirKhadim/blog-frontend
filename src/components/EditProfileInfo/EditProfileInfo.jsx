@@ -16,7 +16,7 @@ const EditProfileInfo = () => {
       setLoading(true);
       try {
         const token = localStorage.getItem('accesstoken');
-        const response = await axios.get('http://localhost:8000/api/v1/users/current-user', {
+        const response = await axios.get('https://blog-api-two-rho.vercel.app/api/v1/users/current-user', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -51,7 +51,7 @@ const EditProfileInfo = () => {
     setLoading(true);
     try {
       const token = localStorage.getItem('accesstoken');
-      const response = await axios.patch('http://localhost:8000/api/v1/users/update-account', user, {
+      const response = await axios.patch('https://blog-api-two-rho.vercel.app/api/v1/users/update-account', user, {
         headers: {
           Authorization: `Bearer ${token}`,
           'Content-Type': 'application/json',

@@ -14,7 +14,7 @@ const BlogDetail = () => {
       try {
         const token = localStorage.getItem('accesstoken');
         
-        const response = await axios.get(`http://localhost:8000/api/v1/posts/posts/posts/${postId}`, {
+        const response = await axios.get(`https://blog-api-two-rho.vercel.app/api/v1/posts/posts/posts/${postId}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

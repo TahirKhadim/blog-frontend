@@ -16,7 +16,7 @@ const Login = () => {
     setError('');
 
     try {
-      const response = await axios.post('http://localhost:8000/api/v1/users/login', {
+      const response = await axios.post('https://blog-api-two-rho.vercel.app/api/v1/users/login', {
         username,
         password,
       });

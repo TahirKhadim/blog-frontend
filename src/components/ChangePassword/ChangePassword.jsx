@@ -21,7 +21,7 @@ const ChangePassword = () => {
       setLoading(true);
       const token = localStorage.getItem('accesstoken');
       const response = await axios.post(
-        'http://localhost:8000/api/v1/users/change-password',
+        'https://blog-api-two-rho.vercel.app/api/v1/users/change-password',
         { oldpassword, newPassword },
         {
           headers: {

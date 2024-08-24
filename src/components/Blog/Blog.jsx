@@ -14,7 +14,7 @@ const Blog = () => {
     const fetchBlogs = async () => {
       try {
         const token = localStorage.getItem('accesstoken'); // Retrieve token from local storage
-        const response = await axios.get('http://localhost:8000/api/v1/posts/posts', {
+        const response = await axios.get('https://blog-api-two-rho.vercel.app/api/v1/posts/posts', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -28,7 +28,7 @@ const Blog = () => {
         setBlogs(blogsWithLikes);
 
         // Fetch liked posts by the user
-        const likedResponse = await axios.get('http://localhost:8000/api/v1/posts/posts', {
+        const likedResponse = await axios.get('https://blog-api-two-rho.vercel.app/api/v1/posts/posts', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -49,7 +49,7 @@ const Blog = () => {
   const handleLike = async (postId) => {
     try {
       const token = localStorage.getItem('accesstoken');
-      const response = await axios.post(`http://localhost:8000/api/v1/like/like/${postId}`, {}, {
+      const response = await axios.post(`https://blog-api-two-rho.vercel.app/api/v1/like/like/${postId}`, {}, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

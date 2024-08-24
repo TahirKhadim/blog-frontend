@@ -43,7 +43,7 @@ const AddBlog = () => {
       formData.append('writtenby', sanitizedWrittenby);
       if (image) formData.append('image', image);
   
-      const response = await axios.post('http://localhost:8000/api/v1/posts/posts', formData, {
+      const response = await axios.post('https://blog-api-two-rho.vercel.app/api/v1/posts/posts', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           Authorization: `Bearer ${token}`,

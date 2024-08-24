@@ -22,7 +22,7 @@ const Profile = () => {
       setLoading(true);
       try {
         const token = localStorage.getItem('accesstoken');
-        const response = await axios.get('http://localhost:8000/api/v1/users/current-user', {
+        const response = await axios.get('https://blog-api-two-rho.vercel.app/api/v1/users/current-user', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
